@@ -1,6 +1,14 @@
-runs-on
-  jobs:
-    test:
-      steps:
-        - name: 24f3001267@ds.study.iitm.ac.in
-          run: echo "Hello, world!"
+name: Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "Hello, world!"
